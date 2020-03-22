@@ -457,8 +457,8 @@ var card =
 	if(false) {
 		// When the styles change, update the <style> tags
 		if(!content.locals) {
-			module.hot.accept("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/index.js!./card.scss", function() {
-				var newContent = require("!!../../node_modules/css-loader/index.js!../../node_modules/sass-loader/index.js!./card.scss");
+			module.hot.accept("!!../../node_modules/css-loader/main.js!../../node_modules/sass-loader/main.js!./card.scss", function() {
+				var newContent = require("!!../../node_modules/css-loader/main.js!../../node_modules/sass-loader/main.js!./card.scss");
 				if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 				update(newContent);
 			});
