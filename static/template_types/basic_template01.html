@@ -1,0 +1,153 @@
+<div class="app-content content">
+
+    <div class="content-center">
+
+
+        <div class="card-content" ng-app="app5" ng-controller="basic_template_angular_controller">
+            <div class="card-body">
+                <div class="row">
+
+                    <div class="col-4">
+                        <div class="card shadow-6" style="border-style: dotted;border-color: red">
+                            <button type="button" class="btn btn-primary" data-toggle="modal"
+                                    data-target=".barchart_configuration">Large modal
+                            </button>
+
+                            <div class="modal fade barchart_configuration" tabindex="-1" role="dialog"
+                                 aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-lg">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">New message</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="card">
+                                                <div class="row">
+                                                    <div class="col-6">
+
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlInput1">Title Name </label>
+                                                            <input type="text" class="form-control"
+                                                                   id="exampleFormControlInput1"
+                                                                   placeholder="Profit Bar chart" ng-model="title_name">
+                                                        </div>
+                                                        <div class="form-group ">
+                                                            <label for="exampleFormControlInput1">X Axis Name</label>
+                                                            <input type="text" class="form-control"
+                                                                   id="exampleFormControlInput1"
+                                                                   placeholder="Date" ng-model="x_axis">
+                                                        </div>
+
+                                                        <div class="form-group">
+                                                            <label for="exampleFormControlInput1">Y Axis Name</label>
+                                                            <input type="text" class="form-control"
+                                                                   id="exampleFormControlInput1"
+                                                                   placeholder="Profit $" ng-model="y_axis">
+                                                        </div>
+                                                        <div class="form-group">
+                                                            <h4>Select Date Options</h4>
+                                                            <label>Start Date</label>
+                                                            <input class="form-control" type="date"
+                                                                   id="exampleInput1" name="input"
+                                                                   ng-model="start.value"
+                                                                   placeholder="yyyy-MM-dd" min="2003-01-01"
+                                                                   max="2013-12-31" required/>
+                                                            <label>End Date</label>
+                                                            <input class="form-control" type="date"
+                                                                   id="exampleInput2" name="input"
+                                                                   ng-model="end.value"
+                                                                   placeholder="yyyy-MM-dd" min="2003-01-01"
+                                                                   max="2013-12-31" required/>
+
+
+                                                        </div>
+                                                        <center><p>Or</p></center>
+                                                        <div class="form-group form-inline ">
+
+
+                                                            <div class="custom-control custom-radio">
+                                                                <input type="radio" id="customRadio1"
+                                                                       name="customRadio"
+                                                                       class="custom-control-input">
+                                                                <label class="custom-control-label"
+                                                                       for="customRadio1">Weekly</label>
+                                                            </div>&nbsp;&nbsp;
+                                                            <div class="custom-control custom-radio">
+                                                                <input type="radio" id="customRadio2"
+                                                                       name="customRadio"
+                                                                       class="custom-control-input">
+                                                                <label class="custom-control-label"
+                                                                       for="customRadio2">Monthly</label>
+                                                            </div>&nbsp;&nbsp;
+
+                                                            <div class="custom-control custom-radio">
+                                                                <input type="radio" id="customRadio3"
+                                                                       name="customRadio"
+                                                                       class="custom-control-input">
+                                                                <label class="custom-control-label"
+                                                                       for="customRadio3">Yearly</label>
+                                                            </div>&nbsp;&nbsp;
+
+
+                                                        </div>
+
+
+                                                    </div>
+
+                                                    <div class="col-6">
+
+
+                                                        <div class="form-group ">
+                                                            <label for="exampleFormControlInput1">Select Column</label>
+                                                            <select class="form-control" ng-model="column_selected"
+                                                                    ng-options="x for x in columns">
+                                                            </select>
+                                                        </div>
+                                                        <div class="form-group ">
+                                                            <label for="exampleFormControlInput1">Select Chart</label>
+                                                            <select class="form-control" ng-model="chart_selected"
+                                                                    ng-options="x for x in charts">
+                                                            </select>
+                                                        </div>
+
+
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close
+                                            </button>
+                                            <button type="button" class="btn btn-primary" ng-click="chart_()">Create
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="chart1"></div>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="card shadow-6" style="border-style: dotted;border-color: red">
+                            <button class="btn btn-success" ng-click="piechart1()">LOAD</button>
+                            <div id="pie_chart"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

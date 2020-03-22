@@ -1,0 +1,59 @@
+.my-custom-scrollbar {
+    position: relative;
+    height: 400px;
+    overflow: auto;
+}
+
+.table-wrapper-scroll-y {
+    display: block;
+}
+
+
+.grid-stack-item-removing {
+    opacity: 0.8;
+    filter: blur(5px);
+}
+
+#trash {
+    background: rgba(255, 0, 0, 0.4);
+}
+
+
+.scrollmenu {
+    background-color: #333;
+    overflow: auto;
+    white-space: nowrap;
+}
+
+.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+}
+
+.scrollmenu a:hover {
+    background-color: #777;
+}
+
+
+.drop_box_style {
+
+    min-width: 30px;
+    min-height:40px;
+     width: auto;
+    height: auto;
+    padding: 0px;
+    margin: 0;
+
+}
+
+
+
+
+
+
+
+
+

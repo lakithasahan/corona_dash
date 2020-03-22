@@ -1,0 +1,96 @@
+body {background-color: #eee;}
+
+.spacer { height: 50px; }
+
+@-moz-keyframes translate {
+  0% {-webkit-transform: translate(0px, 0px);}
+  50% {-webkit-transform: translate(40px, 0px);}
+}
+
+@-webkit-keyframes translate {
+  0% {-webkit-transform: translate(0px, 0px);}
+  50% {-webkit-transform: translate(40px, 0px);}
+}
+
+.load-line {
+  width: 10px;
+  height: 10px;
+  background-color: blue;
+  border: 1px solid blue;
+
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  -ms-border-radius: 50%;
+
+  -webkit-animation-name: translate;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-delay: 0.5s;
+
+  -moz-animation-name: translate;
+  -moz-animation-duration: 2s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-delay: 0.5s;
+}
+
+
+@-webkit-keyframes grow {
+  0% {height: 0px;}
+  50% {height: 15px;}
+}
+
+.load-column-container {width: 60; height: 20px; position: relative;}
+.load-column {
+  width: 10px;
+  height: 0px;
+  background-color: #888;
+  position: absolute;
+  bottom: 0px;
+  -webkit-animation-name: grow;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+}
+.column-two {margin-left: 12px; -webkit-animation-delay: 0.25s;}
+.column-three {margin-left: 24px; -webkit-animation-delay: 0.5s;}
+.column-four {margin-left: 36px; -webkit-animation-delay: 0.75s;}
+.column-five {margin-left: 48px; -webkit-animation-delay: 1s;}
+
+
+
+
+.loading-circle {
+  border: 3px solid black;
+	border-right: 3px solid #fff;
+	border-bottom: 3px solid #fff;
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	-webkit-animation: loading 1s infinite linear;
+	-moz-animation: loading 1s infinite linear;
+	-o-animation: loading 1s infinite linear;
+	animation: loading 1s infinite linear;
+}
+
+@-webkit-keyframes loading {
+	from {-webkit-transform: rotate(0deg);}
+	to {-webkit-transform: rotate(360deg);}
+}
+
+@-moz-keyframes loading {
+	from {-moz-transform: rotate(0deg);}
+	to {-moz-transform: rotate(360deg);}
+}
+
+@-o-keyframes loading {
+	from {-o-transform: rotate(0deg);}
+	to {-o-transform: rotate(360deg);}
+}
+
+@keyframes loading {
+	from {transform: rotate(0deg);}
+	to {transform: rotate(360deg);}
+}
