@@ -19,10 +19,11 @@ def get_data(request):
     json_converted2 = corona_obj.precentage_of_death_by_age()   #age_death_table data
     # json_converted3=corona_obj.time_seires_header_data()
     json_conveted3,json_converted4=corona_obj.world_wide_time_series()
+    json_converted5=corona_obj.symptoms()
 
 
 
-    data={'data1':json_converted0,'data2':json_converted1,'data3':json_converted2,'data4':json_conveted3,'data5':json_converted4}
+    data={'data1':json_converted0,'data2':json_converted1,'data3':json_converted2,'data4':json_conveted3,'data5':json_converted4,'data6':json_converted5}
 
     return JsonResponse(json.dumps(data), safe=False)
 
