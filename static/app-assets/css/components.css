@@ -4,7 +4,7 @@ html {
   width: 100%; }
   html body {
     height: 100%;
-    background-color: #f4f5fa;
+    background-color: rgba(14, 59, 117, 0.78);
     direction: ltr; }
     html body.fixed-navbar {
       padding-top: 5rem; }
@@ -28,7 +28,7 @@ html {
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 12, 84, 0.78);
         cursor: pointer;
         transition: all 0.7s;
         z-index: -1; }

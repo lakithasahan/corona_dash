@@ -15,14 +15,15 @@
           content="admin template, modern admin template, dashboard template, flat admin template, responsive admin template, web app, crypto dashboard, bitcoin dashboard">
     <meta name="author" content="PIXINVENT">
     <title>DataM</title>
-    <link rel="apple-touch-icon" href="{% static 'app-assets/images/ico/apple-icon-120.png' %}">
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'app-assets/images/ico/favicon.ico' %}">
+    <link rel="apple-touch-icon" href="{% static 'app-assets/images/ico/virus.png' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'app-assets/images/ico/virus.png' %}">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i%7CQuicksand:300,400,500,700"
           rel="stylesheet">
 
     <!-- BEGIN: Vendor CSS-->
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/css/vendors.min.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/css/pickers/daterange/daterangepicker.css' %}">
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'app-assets/vendors/css/pickers/daterange/daterangepicker.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/css/forms/icheck/icheck.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/vendors/css/forms/icheck/custom.css' %}">
     <!-- END: Vendor CSS-->
@@ -53,7 +54,6 @@
     <link rel="stylesheet" type="text/css" href="{% static 'app-assets/css/pages/card-statistics.css' %}">
 
 
-
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -67,10 +67,50 @@
 
 
 <body class="vertical vertical-menu-modern "
-      data-open="click" data-menu="vertical-menu-modern" >
+      data-open="click" data-menu="vertical-menu-modern">
 
 <div class="card-header">
-    <H2>Covid-19 Dashboard</H2>
+    <div class="row">
+        <div class="col-5">
+            <img src="{% static 'app-assets/images/ico/virus.png' %}" style="float: right">
+        </div>
+        <div class="col-6">
+            <center><H2 style="float: left">Covid-19 Dashboard</H2></center>
+
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="float: right">
+                About
+            </button>
+
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                 aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                           <center> <h5 class="modal-title" id="exampleModalLabel">Created By</h5></center>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <P><b>Lakitha Sahan Hetiarachchi</b></P>
+                            <p>Researcher & Data Scientist</p>
+                            <p>Email: lakithasahanhettiarachchi@gmail.com</p>
+                            <a href="https://www.linkedin.com/in/lakithasahan">LinkedIn Profile</a>
+                            <br><br>
+
+                            <p><b>Data Sources</b></p>
+                            <p href="https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset">https://www.kaggle.com/sudalairajkumar/novel-corona-virus-2019-dataset</p>
+                            <p href="https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases">https://data.humdata.org/dataset/novel-coronavirus-2019-ncov-cases</p>
+                            <p href="https://www.worldometers.info/coronavirus/">https://www.worldometers.info/coronavirus/</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
 </div>
 
 <!-- BEGIN: Header-->

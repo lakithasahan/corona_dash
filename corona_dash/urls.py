@@ -18,10 +18,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from corona_dash.views import index_view, get_data
+from corona_dash.views import index_view, get_data, get_time_series_data
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index_view),
     path('get_data',get_data),
+    path('get_time_seires_data',get_time_series_data),
 ]

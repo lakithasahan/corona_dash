@@ -1200,7 +1200,7 @@ pre {
 .table-dark,
 .table-dark > th,
 .table-dark > td {
-  background-color: #cbcccf; }
+  background-color: rgba(247, 247, 241, 0.26); }
 
 .table-dark th,
 .table-dark td,
@@ -1237,7 +1237,8 @@ pre {
 
 .table-dark {
   color: #fff;
-  background-color: #464855; }
+  background-color: rgba(231, 228, 230, 0.78)
+}
   .table-dark th,
   .table-dark td,
   .table-dark thead th {
@@ -3195,7 +3196,7 @@ input[type="button"].btn-block {
   flex-direction: column;
   min-width: 0;
   word-wrap: break-word;
-  background-color: #fff;
+  background-color: rgb(248, 255, 250);
   background-clip: border-box;
   border: 1px solid rgba(0, 0, 0, 0.06);
   border-radius: 0.35rem; }
@@ -7696,7 +7697,7 @@ a.text-dark:hover, a.text-dark:focus {
   .navbar {
     display: none; }
   .badge {
-    border: 1px solid #000; }
+    border: 1px solid #b6b6b6; }
   .table {
     border-collapse: collapse !important; }
     .table td,
