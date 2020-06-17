@@ -15,19 +15,19 @@ class corona_dash_class():
 
     def __init__(self):
 
-        df_deaths = dd.read_csv('data/dataset2/time_series_covid19_deaths_global.csv')
+        df_deaths = dd.read_csv('data/live_data_linked/time_series_covid19_deaths_global.csv')
         self.df_deaths = df_deaths
 
-        df_recovered = dd.read_csv('data/dataset2/time_series_covid19_recovered_global.csv')
+        df_recovered = dd.read_csv('data/live_data_linked/time_series_covid19_recovered_global.csv')
         self.df_recovered = df_recovered
 
-        df_confirmed = dd.read_csv('data/dataset2/time_series_covid19_confirmed_global.csv')
+        df_confirmed = dd.read_csv('data/live_data_linked/time_series_covid19_confirmed_global.csv')
         self.df_confirmed = df_confirmed
 
-        df_stats = pd.read_csv('data/dataset2/COVID19_line_list_data.csv')
+        df_stats = pd.read_csv('data/live_data_linked/COVID19_line_list_data.csv')
         self.df_stats = df_stats
 
-        df_webscaraped_table = pd.read_csv('data/dataset2/stat_table.csv')
+        df_webscaraped_table = pd.read_csv('data/live_data_linked/stat_table.csv')
         self.df_webscaraped_table = df_webscaraped_table
         print(df_webscaraped_table)
         print(df_webscaraped_table.columns)

@@ -7,6 +7,7 @@
     <script src="{% static 'app-assets/css/my_styles.css' %}"></script>
     <!-- BEGIN: Content-->
     <div class="app-content content">
+        {% csrf_token %}
 
         <div class="content-wrapper">
             <div class="content-header row">
@@ -73,7 +74,7 @@
                                     <div class="media d-flex">
                                         <div class="media-body text-left">
                                             <h3 class="danger">{{ precentage_of_total_population }} %</h3>
-                                            <h7><b>Percentage of The Total Population Infected</b></h7>
+                                            <h7><b>Percentage of The 1M Population Infected</b></h7>
                                         </div>
 
                                     </div>
@@ -147,7 +148,8 @@
                                         <div class="media-body text-left">
                                             <h3 class="danger">{{
                                                 predicted_endof_twoweeeks_precentage_of_total_population }} %</h3>
-                                            <h6><b>Percentage of The Total Population Infected </b></h6>
+                                            <h6><b>Percentage of The 1M Population Infected</b></h6>
+                                            <h7>Forecast End Of Next Two Weeks</h7>
                                         </div>
 
                                     </div>
@@ -180,6 +182,7 @@
                         <div class="card">
                             <div class="card-header">
                                 <h3><b>Worldwide Covid-19 Growth Stats</b></h3>
+                                <p>Below Chart shows the present and forecasted Deaths,Confirm and Recover rates</p>
                                 <a class="heading-elements-toggle"><i class="la la-ellipsis-v font-medium-3"></i></a>
                                 <div class="heading-elements">
                                     <ul class="list-inline mb-0">
@@ -208,14 +211,16 @@
                     <div class="col-xl6 col-lg-6 col-12">
                         <div class="card">
                             <div class="card-header">
-                                <H3><b>Corona Statistics</b></H3>
+                                <H3><b>Covid-19 Current Statistics</b></H3>
+                                <P>Select the country to observe total Confirm,Recover and Death Cases </P>
+
                             </div>
 
                             <div class="card" style="padding: 15px">
 
 
                                 <input class="form-control" ng-model="searchText"
-                                       placeholder="Search by Country Ex-Sri Lanka">
+                                       placeholder="Search by Country Eg: Sri Lanka">
                                 <br>
                                 <div class="my-custom-scrollbar table-wrapper-scroll-y">
                                     {%verbatim%}
@@ -262,6 +267,7 @@
 
                             </div>
                             <div class="card shadow" style="padding: 15px">
+                                <center><p>Country wise covid-19 Confirm,Recover and Death Count Growth</p></center>
 
                                 <div id="chart2"></div>
 
@@ -282,9 +288,11 @@
                         <div class="card">
                             <div class="card-content ">
                                 <div class="card-header">
-                                    <H3><b>Age Groups Corona Effects</b></H3>
+                                    <H3><b>Covid-19 Risk Percentages Based On Age</b></H3>
+                                    <p>Death Risk Percentage upon gender and age range </p>
                                 </div>
                                 <div class="card" style="padding: 15px">
+
                                     <div id="scatter"></div>
                                 </div>
                             </div>
@@ -295,7 +303,8 @@
                         <div class="card">
                             <div class="card-content">
                                 <div class="card-header">
-                                    <H3><b> Age Groups Corona Effects</b></H3>
+
+                                    <H3><b>Classification of Covid-19 Risks Based On Age Groups</b></H3>
                                 </div>
                                 <div class="card" style="padding: 15px">
                                     <div id="pie_chart">
@@ -320,7 +329,8 @@
                                     <H3><b>Control And Prevention</b></H3>
                                 </div>
                                 <div class="card" style="padding: 15px">
-                                    <iframe src="https://www.osha.gov/SLTC/mers/control_prevention.html" style="min-height: 450px">
+                                    <iframe src="https://www.osha.gov/SLTC/mers/control_prevention.html"
+                                            style="min-height: 450px">
                                         <p>Your browser does not support iframes.</p>
                                     </iframe>
                                 </div>
@@ -333,6 +343,7 @@
                             <div class="card-content">
                                 <div class="card-header">
                                     <H3><b>Covid-19 Symptoms</b></H3>
+                                    <p>Covid-19 main symptom percentages</p>
                                 </div>
                                 <div class="card" style="padding: 15px">
                                     <div id="barchart">
